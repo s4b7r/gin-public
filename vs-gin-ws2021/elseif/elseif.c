@@ -5,6 +5,7 @@ int main(int argc, char **argv) {
     }
     else if (1 > 0) {
         printf("Nice.\n");
+    }
     else {
         printf("Hello World\n");
     }
