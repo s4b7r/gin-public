@@ -18,5 +18,8 @@
     <ClCompile Include="faculty.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="faculty-2.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
