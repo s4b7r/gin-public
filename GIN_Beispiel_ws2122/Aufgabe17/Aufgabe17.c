@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
 	while (eingabe != 0) {
 		printf("Bitte Zahl eingeben: ");
 		scanf("%d", &eingabe);
-		if ( eingabe != 0)
+		if (eingabe != 0)
 		{
 			irgendwas = eingabe * irgendwas;
 
