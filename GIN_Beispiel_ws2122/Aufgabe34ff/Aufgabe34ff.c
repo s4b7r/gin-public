@@ -85,22 +85,29 @@ void mean() {
 }
 void mean2() {
 	// A34 as base for A36
-	int number[5];
+	int number[100];
 	int sum = 0;
 	int max=-999999999, min=999999999;
+	int how_many;
 
-	for (int i = 0; i < 5; i++) {
+	printf("how many numbers: ");
+	scanf("%d", &how_many);
+	if (how_many > 100) {
+		printf("Be prepared for horrible things to happen!\n");
+	}
+
+	for (int i = 0; i < how_many; i++) {
 		printf("num %d: ", i);
 		scanf("%d", &number[i]);
 		max = get_max(max, number[i]);
 		min = get_min(min, number[i]);
 	}
 
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < how_many; i++) {
 		sum += number[i];
 	}
 	
-	printf("mean: int %d, float %f\n", sum / 5, (double)sum / 5);
+	printf("mean: int %d, float %f\n", sum / how_many, (double)sum / how_many);
 	printf("min: %d, max: %d\n", min, max);
 }
 int main(int argc, char **argv) {
