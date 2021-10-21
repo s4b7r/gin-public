@@ -99,11 +99,11 @@ void mean2() {
 	for (int i = 0; i < how_many; i++) {
 		printf("num %d: ", i);
 		scanf("%d", &number[i]);
-		max = get_max(max, number[i]);
-		min = get_min(min, number[i]);
 	}
 
 	for (int i = 0; i < how_many; i++) {
+		max = get_max(max, number[i]);
+		min = get_min(min, number[i]);
 		sum += number[i];
 	}
 	
