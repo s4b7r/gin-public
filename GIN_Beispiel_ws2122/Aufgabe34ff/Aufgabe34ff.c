@@ -110,6 +110,27 @@ void mean2() {
 	printf("mean: int %d, float %f\n", sum / how_many, (double)sum / how_many);
 	printf("min: %d, max: %d\n", min, max);
 }
+void mean3() {
+	// A38 as base for A39
+	int input;
+	int sum = 0;
+	int max = -999999999, min = 999999999;
+	int how_many;
+
+	printf("how many numbers: ");
+	scanf("%d", &how_many);
+	
+	for (int i = 0; i < how_many; i++) {
+		printf("num %d: ", i);
+		scanf("%d", &input);
+		max = get_max(max, input);
+		min = get_min(min, input);
+		sum += input;
+	}
+
+	printf("mean: int %d, float %f\n", sum / how_many, (double)sum / how_many);
+	printf("min: %d, max: %d\n", min, max);
+}
 int main(int argc, char **argv) {
 	int choice;
 	printf("1*/\n");
@@ -121,6 +142,7 @@ int main(int argc, char **argv) {
 	else if (choice == 2) continuous_multiplication();
 	else if (choice == 3) mean();
 	else if (choice == 4) mean2();
+	else if (choice == 5) mean3();
 	system("pause");
 	return 0;
 }
