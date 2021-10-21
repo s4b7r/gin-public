@@ -96,7 +96,10 @@ void mean2() {
 		min = get_min(min, number[i]);
 	}
 
-	sum = number[0] + number[1] + number[2] + number[3] + number[4];
+	for (int i = 0; i < 5; i++) {
+		sum += number[i];
+	}
+	
 	printf("mean: int %d, float %f\n", sum / 5, (double)sum / 5);
 	printf("min: %d, max: %d\n", min, max);
 }
