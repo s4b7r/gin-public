@@ -87,14 +87,9 @@ void mean2() {
 	// A34 as base for A36
 	int number[5];
 	int sum = 0;
-	int max, min;
+	int max=-999999999, min=999999999;
 
-	printf("num 0: ");
-	scanf("%d", &number[0]);
-	max = number[0];
-	min = number[0];
-
-	for (int i = 1; i < 5; i++) {
+	for (int i = 0; i < 5; i++) {
 		printf("num %d: ", i);
 		scanf("%d", &number[i]);
 		max = get_max(max, number[i]);
