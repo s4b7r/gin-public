@@ -94,25 +94,12 @@ void mean2() {
 	max = number[0];
 	min = number[0];
 
-	printf("num 1: ");
-	scanf("%d", &number[1]);
-	max = get_max(max, number[1]);
-	min = get_min(min, number[1]);
-
-	printf("num 2: ");
-	scanf("%d", &number[2]);
-	max = get_max(max, number[2]);
-	min = get_min(min, number[2]);
-
-	printf("num 3: ");
-	scanf("%d", &number[3]);
-	max = get_max(max, number[3]);
-	min = get_min(min, number[3]);
-
-	printf("num 4: ");
-	scanf("%d", &number[4]);
-	max = get_max(max, number[4]);
-	min = get_min(min, number[4]);
+	for (int i = 1; i < 5; i++) {
+		printf("num %d: ", i);
+		scanf("%d", &number[i]);
+		max = get_max(max, number[i]);
+		min = get_min(min, number[i]);
+	}
 
 	sum = number[0] + number[1] + number[2] + number[3] + number[4];
 	printf("mean: int %d, float %f\n", sum / 5, (double)sum / 5);
