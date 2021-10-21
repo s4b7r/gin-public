@@ -83,15 +83,52 @@ void mean() {
 	printf("mean: int %d, float %f\n", sum / 5, (double)sum / 5);
 	printf("min: %d, max: %d\n", min, max);
 }
+void mean2() {
+	// A34 as base for A36
+	int number[5];
+	int sum = 0;
+	int max, min;
+
+	printf("num 0: ");
+	scanf("%d", &number[0]);
+	max = number[0];
+	min = number[0];
+
+	printf("num 1: ");
+	scanf("%d", &number[1]);
+	max = get_max(max, number[1]);
+	min = get_min(min, number[1]);
+
+	printf("num 2: ");
+	scanf("%d", &number[2]);
+	max = get_max(max, number[2]);
+	min = get_min(min, number[2]);
+
+	printf("num 3: ");
+	scanf("%d", &number[3]);
+	max = get_max(max, number[3]);
+	min = get_min(min, number[3]);
+
+	printf("num 4: ");
+	scanf("%d", &number[4]);
+	max = get_max(max, number[4]);
+	min = get_min(min, number[4]);
+
+	sum = number[0] + number[1] + number[2] + number[3] + number[4];
+	printf("mean: int %d, float %f\n", sum / 5, (double)sum / 5);
+	printf("min: %d, max: %d\n", min, max);
+}
 int main(int argc, char **argv) {
 	int choice;
 	printf("1*/\n");
 	printf("2 cont.multiplication\n");
 	printf("3 mean\n");
+	printf("4 mean2\n");
 	scanf("%d", &choice);
 	if (choice == 1) binary_operators();
 	else if (choice == 2) continuous_multiplication();
 	else if (choice == 3) mean();
+	else if (choice == 4) mean2();
 	system("pause");
 	return 0;
 }
