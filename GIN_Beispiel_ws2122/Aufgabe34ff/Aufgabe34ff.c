@@ -32,22 +32,56 @@ void continuous_multiplication() {
 	}
 	printf("%d\n", product);
 }
+int get_max(int x, int y) {
+	if (x > y) {
+		return x;
+	}
+	else {
+		return y;
+	}
+}
+int get_min(int x, int y) {
+	if (x < y) {
+		return x;
+	}
+	else {
+		return y;
+	}
+}
 void mean() {
 	// A211 as base for A34
 	int number0, number1, number2, number3, number4;
 	int sum = 0;
+	int max, min;
+	
 	printf("num 0: ");
 	scanf("%d", &number0);
+	max = number0;
+	min = number0;
+
 	printf("num 1: ");
 	scanf("%d", &number1);
+	max = get_max(max, number1);
+	min = get_min(min, number1);
+	
 	printf("num 2: ");
 	scanf("%d", &number2);
+	max = get_max(max, number2);
+	min = get_min(min, number2);
+
 	printf("num 3: ");
 	scanf("%d", &number3);
+	max = get_max(max, number3);
+	min = get_min(min, number3);
+
 	printf("num 4: ");
 	scanf("%d", &number4);
+	max = get_max(max, number4);
+	min = get_min(min, number4);
+
 	sum = number0 + number1+number2+number3+number4;
 	printf("mean: int %d, float %f\n", sum / 5, (double)sum / 5);
+	printf("min: %d, max: %d\n", min, max);
 }
 int main(int argc, char **argv) {
 	int choice;
